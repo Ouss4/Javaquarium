@@ -5,9 +5,11 @@ import com.zds.aquarium.EtreVivant;
 public class Algue extends EtreVivant{
 	
 	private final int PV_ALGUE_PAR_TOUR = 1;
+	private static final int PV_DONNEE = 3;
+	private static final int PV_PERDU = 2;
 	
 	public Algue(int age, String id){
-		super(age, 3, 2, id);
+		super(age, PV_DONNEE, PV_PERDU, id);
 	}
 	
 	public Algue reproduire() {

@@ -8,9 +8,11 @@ public class Poisson extends EtreVivant{
 
 	private PoissonSpec spec;
 	private final int PV_POISSON_PERDU_PAR_TOUR = 1;
+	private static final int PV_DONNEE = 5;
+	private static final int PV_PERDU = 4;
 	
 	public Poisson(String nom, PoissonSpec spec, int age){
-		super(age, 5, 4, nom);
+		super(age, PV_DONNEE, PV_PERDU, nom);
 		this.spec = spec;
 	}
 	
