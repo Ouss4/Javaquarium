@@ -6,7 +6,6 @@ import java.util.Map;
 public class PoissonFactory {
 	
 	public static Poisson nouveauPoisson(String nom, int age, Race race, Sexe sexe){
-		
 		Map<String, Property> spec = new HashMap<String, Property>();
 		
 		switch(race){

@@ -41,7 +41,6 @@ public class Aquarium {
 	}
 	
 	public void tour(){
-		
 		System.out.println("Tour N°" + (++tourId));
 		System.out.println("L'Aquarium a " + getNumPoissons() + " poissons et " +
 							getNumAlgues() + " algues");
@@ -60,17 +59,10 @@ public class Aquarium {
 		System.out.println("Maintenant l'aquarium a " + getNumPoissons() + " poissons et " + getNumAlgues() + " algues");
 	}
 	
-	private void nourirPoisson(){
-		
-		for(Poisson p : listPoisson){
-			if(p.aFaim()){
-				if(p.getProperty("Alimentation").equals(Alimentation.CARNIVORE)){
-					nourir(p, listPoisson);
-				}
-				else{
-					nourir(p, listAlgue);
-				}
-			}
+	private void grandir(List<? extends EtreVivant> l){
+		for(EtreVivant ev : l){
+			ev.grandir();
+			System.out.println(ev.getId() + " : " + ev.getPV() + "pv" + ", " + ev.getAge() + "age");
 		}
 	}
 	
@@ -113,25 +105,20 @@ public class Aquarium {
 		}
 	}
 	
-	private void grandir(List<? extends EtreVivant> l){
-		for(EtreVivant ev : l){
-			ev.grandir();
-			System.out.println(ev.getId() + " : " + ev.getPV() + "pv" + ", " + ev.getAge() + "age");
-		}
-	}
-	
-	private void enleverMorts(List<? extends EtreVivant> l){
-		for(Iterator<? extends EtreVivant> it = l.iterator(); it.hasNext(); ){
-			EtreVivant ev = it.next();
-			if(ev.estMort()){
-				System.out.println(ev.getId() + " est mort.");
-				it.remove();
+	private void nourirPoisson(){
+		for(Poisson p : listPoisson){
+			if(p.aFaim()){
+				if(p.getProperty("Alimentation").equals(Alimentation.CARNIVORE)){
+					nourir(p, listPoisson);
+				}
+				else{
+					nourir(p, listAlgue);
+				}
 			}
 		}
 	}
 	
 	private void nourir(Poisson p, List<? extends EtreVivant> l){
-		
 		Random r = new Random();
 		int x = r.nextInt(l.size());
 		
@@ -142,6 +129,16 @@ public class Aquarium {
 		
 		if(l.get(x).estMort()){
 			System.out.println(l.get(x).getId() + " a " + l.get(x).getPV() + " PV il va mourir... RIP.");
+		}
+	}
+	
+	private void enleverMorts(List<? extends EtreVivant> l){
+		for(Iterator<? extends EtreVivant> it = l.iterator(); it.hasNext(); ){
+			EtreVivant ev = it.next();
+			if(ev.estMort()){
+				System.out.println(ev.getId() + " est mort.");
+				it.remove();
+			}
 		}
 	}
 }

@@ -56,7 +56,6 @@ public class Poisson extends EtreVivant{
 	}
 
 	public Poisson reproduire(Poisson autre) {
-		
 		if(this == autre){
 			return null;
 		}
