@@ -7,14 +7,9 @@ public abstract class EtreVivant {
 	protected int pvDonnee;
 	protected int pvPerdu;
 	protected String id;
-	
-	public EtreVivant(){
-		age = 0;
-		pv = 10;
-	}
-	
+		
 	public EtreVivant(int age, int pvDonnee, int pvPerdu, String id){
-		this();
+		this.pv = 10;
 		this.age = age;
 		this.pvDonnee = pvDonnee;
 		this.pvPerdu = pvPerdu;
@@ -22,10 +17,14 @@ public abstract class EtreVivant {
 	}
 	
 	public abstract void grandirEnPV();
+	public abstract void hookChangerSexe();
 	
 	public final void grandir(){
 		grandirEnPV();
 		this.age++;
+		if(this.age == 11){
+			hookChangerSexe();
+		}
 	}
 	
 	public boolean estMort(){

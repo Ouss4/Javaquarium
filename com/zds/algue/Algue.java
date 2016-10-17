@@ -34,4 +34,9 @@ public class Algue extends EtreVivant{
 		this.addPV(PV_ALGUE_PAR_TOUR);
 	}
 
+	@Override
+	public void hookChangerSexe() {
+		
+	}
+
 }

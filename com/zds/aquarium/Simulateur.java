@@ -25,26 +25,26 @@ public class Simulateur {
 	}
 	
 	private static void initAquarium(Aquarium aq){
-		aq.ajouterPoisson(PoissonFactory.nouveauPoisson("Merou1Male", 2, Race.MEROU, Sexe.MALE));
+		aq.ajouterPoisson(PoissonFactory.nouveauPoisson("M1M", 2, Race.MEROU, Sexe.MALE));
 		
-		aq.ajouterPoisson(PoissonFactory.nouveauPoisson("Merou1Femelle", 2, Race.MEROU, Sexe.FEMELLE));
+		aq.ajouterPoisson(PoissonFactory.nouveauPoisson("M2M", 2, Race.MEROU, Sexe.MALE));
 		
-		aq.ajouterPoisson(PoissonFactory.nouveauPoisson("Merou2Male", 2, Race.MEROU, Sexe.MALE));
+		aq.ajouterPoisson(PoissonFactory.nouveauPoisson("M3M", 2, Race.MEROU, Sexe.MALE));
 		
-		aq.ajouterPoisson(PoissonFactory.nouveauPoisson("PoissonClown1Femelle", 2, Race.POISSON_CLOWN, Sexe.FEMELLE));
+		aq.ajouterPoisson(PoissonFactory.nouveauPoisson("PC1F", 2, Race.POISSON_CLOWN, Sexe.FEMELLE));
 		
-		aq.ajouterPoisson(PoissonFactory.nouveauPoisson("Thon1Male", 2, Race.THON, Sexe.MALE));
+		aq.ajouterPoisson(PoissonFactory.nouveauPoisson("T1M", 2, Race.THON, Sexe.MALE));
 		
-		aq.ajouterPoisson(PoissonFactory.nouveauPoisson("Thon2Male", 3, Race.THON, Sexe.MALE));
+		aq.ajouterPoisson(PoissonFactory.nouveauPoisson("T2M", 3, Race.THON, Sexe.MALE));
 		
-		aq.ajouterPoisson(PoissonFactory.nouveauPoisson("Sole1Male", 6, Race.SOLE, Sexe.FEMELLE));
+		aq.ajouterPoisson(PoissonFactory.nouveauPoisson("S1F", 6, Race.SOLE, Sexe.FEMELLE));
 		
-		aq.ajouterPoisson(PoissonFactory.nouveauPoisson("Bar1Male", 3, Race.BAR, Sexe.MALE));
+		aq.ajouterPoisson(PoissonFactory.nouveauPoisson("B1M", 3, Race.BAR, Sexe.MALE));
 		
-		aq.ajouterAlgue(new Algue(2, "Algue1"));
-		aq.ajouterAlgue(new Algue(3, "Algue2"));
-		aq.ajouterAlgue(new Algue(4, "Algue3"));
-		aq.ajouterAlgue(new Algue(5, "Algue4"));
+		aq.ajouterAlgue(new Algue(2, "A1"));
+		aq.ajouterAlgue(new Algue(3, "A2"));
+		aq.ajouterAlgue(new Algue(4, "A3"));
+		aq.ajouterAlgue(new Algue(5, "A4"));
 	}
 
 }

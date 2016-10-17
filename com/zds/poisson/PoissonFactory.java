@@ -12,7 +12,7 @@ public class PoissonFactory {
 		switch(race){
 		case MEROU:
 			spec.put("Race", Race.MEROU);
-			spec.put("Sexe", sexe);
+			spec.put("Sexe", Sexe.MALE);
 			spec.put("Reproduction", Reproduction.HERMAPHRODITE_AGE);
 			spec.put("Alimentation", Alimentation.CARNIVORE);
 			break;
@@ -36,7 +36,7 @@ public class PoissonFactory {
 			break;
 		case BAR:
 			spec.put("Race", Race.BAR);
-			spec.put("Sexe", sexe);
+			spec.put("Sexe", Sexe.MALE);
 			spec.put("Reproduction", Reproduction.HERMAPHRODITE_AGE);
 			spec.put("Alimentation", Alimentation.HERBIVORE);
 			break;
