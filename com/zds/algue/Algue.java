@@ -13,7 +13,6 @@ public class Algue extends EtreVivant{
 	}
 	
 	public Algue reproduire() {
-		
 		if(this.estMort()){
 			return null;
 		}

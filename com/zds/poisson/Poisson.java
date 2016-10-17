@@ -6,30 +6,31 @@ import com.zds.aquarium.EtreVivant;
 
 public class Poisson extends EtreVivant{
 
-	private PoissonSpec spec;
+	private PoissonProperty prop;
 	private final int PV_POISSON_PERDU_PAR_TOUR = 1;
+	private final int PV_FAIM = 5;
 	private static final int PV_DONNEE = 5;
 	private static final int PV_PERDU = 4;
 	
-	public Poisson(String nom, PoissonSpec spec, int age){
+	public Poisson(String nom, PoissonProperty prop, int age){
 		super(age, PV_DONNEE, PV_PERDU, nom);
-		this.spec = spec;
+		this.prop = prop;
 	}
 	
-	public PoissonSpec getSpec(){
-		return this.spec;
+	public PoissonProperty getprop(){
+		return this.prop;
 	}
 	
-	public void setSpec(PoissonSpec spec){
-		this.spec = spec;
+	public void setprop(PoissonProperty prop){
+		this.prop = prop;
 	}
 	
 	public Property getProperty(String name){
-		return this.spec.getProperty(name);
+		return this.prop.getProperty(name);
 	}
 	
 	public void setProperty(String name, Property value){
-		this.spec.setProperty(name, value);
+		this.prop.setProperty(name, value);
 	}
 	
 	public boolean memeProp(String property, Poisson autre){
@@ -37,7 +38,7 @@ public class Poisson extends EtreVivant{
 	}
 	
 	public boolean aFaim(){
-		return this.pv <= 5;
+		return this.pv <= PV_FAIM;
 	}
 	
 	public boolean manger(EtreVivant ev) {

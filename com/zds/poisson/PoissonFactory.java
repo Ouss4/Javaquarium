@@ -48,6 +48,6 @@ public class PoissonFactory {
 		default:
 			break;
 		}
-		return new Poisson(nom, new PoissonSpec(spec), age);
+		return new Poisson(nom, new PoissonProperty(spec), age);
 	}
 }

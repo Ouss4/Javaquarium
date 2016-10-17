@@ -2,6 +2,7 @@ package com.zds.aquarium;
 
 public abstract class EtreVivant {
 	
+	protected final int AGE_MORT = 20;
 	protected int age;
 	protected int pv;
 	protected int pvDonnee;
@@ -28,7 +29,7 @@ public abstract class EtreVivant {
 	}
 	
 	public boolean estMort(){
-		return this.pv <= 0 || this.age > 20;
+		return this.pv <= 0 || this.age > AGE_MORT;
 	}
 	
 	public String getId(){

@@ -3,11 +3,11 @@ package com.zds.poisson;
 import java.util.HashMap;
 import java.util.Map;
 
-public class PoissonSpec {
+public class PoissonProperty {
 
 	private Map<String, Property> properties;
 	
-	public PoissonSpec(Map<String, Property> properties){
+	public PoissonProperty(Map<String, Property> properties){
 		if(properties == null){
 			this.properties  = new HashMap<String, Property>();
 		}
