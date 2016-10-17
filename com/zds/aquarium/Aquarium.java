@@ -54,8 +54,8 @@ public class Aquarium {
 		
 		nourirPoisson();
 		
-		mort(listPoisson);
-		mort(listAlgue);
+		enleverMorts(listPoisson);
+		enleverMorts(listAlgue);
 		
 		System.out.println("Maintenant l'aquarium a " + getNumPoissons() + " poissons et " + getNumAlgues() + " algues");
 	}
@@ -120,7 +120,7 @@ public class Aquarium {
 		}
 	}
 	
-	private void mort(List<? extends EtreVivant> l){
+	private void enleverMorts(List<? extends EtreVivant> l){
 		for(Iterator<? extends EtreVivant> it = l.iterator(); it.hasNext(); ){
 			EtreVivant ev = it.next();
 			if(ev.estMort()){
